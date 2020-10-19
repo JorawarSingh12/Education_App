@@ -4,7 +4,7 @@ var Router = express.Router();
 Router.route('/:student_id') 
 .all((req, res, next) => {  
     res.statusCode = 200; 
-    res.setHeader('Content-Type', 'text/plain'); 
+    res.set({'Content-Type': 'text/html'} );
     next(); 
 }) 
 .get((req, res, next) => { 
