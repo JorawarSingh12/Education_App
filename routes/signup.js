@@ -11,6 +11,7 @@ Router.route('/')
     res.render('signup') 
 }) 
 .post((req, res, next) => { 
+    // signup the user
     res.end('When a POST request is made, then this is the response sent to the client!'); 
 }) 
 .put((req, res, next) => { 

@@ -1,6 +1,7 @@
 const express = require('express')
 const port = 3000
 const app = express()
+const mysql = require('mysql'); 
 const bodyParser = require('body-parser')
 
 app.use(bodyParser.urlencoded({extended: false}))
@@ -16,7 +17,7 @@ app.use("/",homepage)
 app.use("/login",login)
 app.use("/signup",signup)
 app.use("/student_dashboard",student_dashboard)
-app.use("/teacher_dashboard",teacher_dashboard);
+app.use("/teacher_dashboard",teacher_dashboard)
 
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`)
