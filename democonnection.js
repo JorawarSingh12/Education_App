@@ -2,7 +2,7 @@ var mysql = require('mysql');
 var con = mysql.createConnection({
     host: "localhost",
     user: "root",
-    password: "Jorawar@123",
+    password: "",
     database: 'education_app'
   });
   
@@ -10,3 +10,4 @@ var con = mysql.createConnection({
     if (err) throw err;
     console.log("Connected!");
   });
+  module.exports = con

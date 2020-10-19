@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Education-App Deshboard</title>
+	<title> Dashboard </title>
 
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-	<link rel="icon" type="image/png" href="assets/AT-pro-logo.png"/>
+	<link rel="icon" type="image/png" href="/images/logo.png"/>
 
 	<!-- Import lib -->
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css">
-	<link rel="stylesheet" type="text/css" href="fontawesome-free/css/all.min.css">
-	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/fontawesome-free-5.15.1-web/css/all.css">
+	<link type="text/css" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 	<!-- End import lib -->
 
 	<link rel="stylesheet" type="text/css" href="/css/student_dashboard.css">
@@ -25,18 +25,10 @@
 				</a>
 			</li>
 			<li class="nav-item">
-				<img src="assets/AT-pro-black.png" alt="ATPro logo" class="logo logo-light">
-				<img src="assets/AT-pro-white.png" alt="ATPro logo" class="logo logo-dark">
+				<img src="/images/logo.png" alt="Edu App" class="logo logo-light">
+				<img src="/images/AT-pro-white.png" alt="Edu App" class="logo logo-dark">
 			</li>
 		</ul>
-		<!-- end nav left -->
-		<!-- form -->
-		<!--<form class="navbar-search">
-			<input type="text" name="Search" class="navbar-search-input" placeholder="What you looking for...">
-			<i class="fas fa-search"></i>
-		</form> -->
-		<!-- end form -->
-		<!-- nav right -->
 		<ul class="navbar-nav nav-right">
 			<li class="nav-item mode">
 				<a class="nav-link" href="#" onclick="switchTheme()">
@@ -140,90 +132,6 @@
 								</span>
 							</a>
 						</li>
-					<!--	<li class="dropdown-menu-item">
-							<a href="#" class="dropdown-menu-link">
-								<div>
-									<i class="fas fa-gift"></i>
-								</div>
-								<span>
-									Assignement one.
-									<br>
-									<span>
-										15/07/2020
-									</span>
-								</span>
-							</a>
-						</li> -->
-					<!--	<li class="dropdown-menu-item">
-							<a href="#" class="dropdown-menu-link">
-								<div>
-									<i class="fas fa-tasks"></i>
-								</div>
-								<span>
-									Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-									<br>
-									<span>
-										15/07/2020
-									</span>
-								</span>
-							</a>
-						</li> -->
-					<!--	<li class="dropdown-menu-item">
-							<a href="#" class="dropdown-menu-link">
-								<div>
-									<i class="fas fa-gift"></i>
-								</div>
-								<span>
-									Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-									<br>
-									<span>
-										15/07/2020
-									</span>
-								</span>
-							</a>
-						</li>
-						<li class="dropdown-menu-item">
-							<a href="#" class="dropdown-menu-link">
-								<div>
-									<i class="fas fa-tasks"></i>
-								</div>
-								<span>
-									Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-									<br>
-									<span>
-										15/07/2020
-									</span>
-								</span>
-							</a>
-						</li>
-						<li class="dropdown-menu-item">
-							<a href="#" class="dropdown-menu-link">
-								<div>
-									<i class="fas fa-gift"></i>
-								</div>
-								<span>
-									Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-									<br>
-									<span>
-										15/07/2020
-									</span>
-								</span>
-							</a>
-						</li>
-						<li class="dropdown-menu-item">
-							<a href="#" class="dropdown-menu-link">
-								<div>
-									<i class="fas fa-tasks"></i>
-								</div>
-								<span>
-									Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-									<br>
-									<span>
-										15/07/2020
-									</span>
-								</span>
-							</a>
-						</li> -->
 					</div>
 					<div class="dropdown-menu-footer">
 						<span>
@@ -234,7 +142,7 @@
 			</li>
 			<li class="nav-item avt-wrapper">
 				<div class="avt dropdown">
-					<img src="assets/tuat.jpg" alt="User image" class="dropdown-toggle" data-toggle="user-menu">
+					<span class="dropdown-toggle" data-toggle="user-menu"><%= student.name %></span>
 					<ul id="user-menu" class="dropdown-menu">
 						<li  class="dropdown-menu-item">
 							<a class="dropdown-menu-link">
@@ -244,30 +152,6 @@
 								<span>Profile</span>
 							</a>
 						</li>
-						<li class="dropdown-menu-item">
-							<a href="#" class="dropdown-menu-link">
-								<div>
-									<i class="fas fa-cog"></i>
-								</div>
-								<span>Settings</span>
-							</a>
-						</li>
-					<!--	<li  class="dropdown-menu-item">
-							<a href="#" class="dropdown-menu-link">
-								<div>
-									<i class="far fa-credit-card"></i>
-								</div>
-								<span>Payments</span>
-							</a>
-						</li> -->
-					<!--	<li  class="dropdown-menu-item">
-							<a href="#" class="dropdown-menu-link">
-								<div>
-									<i class="fas fa-spinner"></i>
-								</div>
-								<span>Projects</span>
-							</a>
-						</li> -->
 						<li  class="dropdown-menu-item">
 							<a href="#" class="dropdown-menu-link">
 								<div>
@@ -328,14 +212,6 @@
 					<span>Test</span>
 				</a>
 			</li>
-		<!--	<li  class="sidebar-nav-item">
-				<a href="#" class="sidebar-nav-link">
-					<div>
-						<i class="fas fa-bug"></i>
-					</div>
-					<span>Morbi</span>
-				</a>
-			</li> -->
 			<li  class="sidebar-nav-item">
 				<a href="#" class="sidebar-nav-link">
 					<div>
@@ -352,30 +228,6 @@
 					<span>Assignment</span>
 				</a>
 			</li>
-		<!--	<li  class="sidebar-nav-item">
-				<a href="#" class="sidebar-nav-link">
-					<div>
-						<i class="fas fa-adjust"></i>
-					</div>
-					<span>Morbi</span>
-				</a>
-			</li> -->
-		<!--	<li  class="sidebar-nav-item">
-				<a href="#" class="sidebar-nav-link">
-					<div>
-						<i class="fab fa-algolia"></i>
-					</div>
-					<span>Praesent</span>
-				</a>
-			</li> -->
-		<!--	<li  class="sidebar-nav-item">
-				<a href="#" class="sidebar-nav-link">
-					<div>
-						<i class="fas fa-audio-description"></i>
-					</div>
-					<span>Pellentesque</span>
-				</a>
-			</li> -->
 		</ul>
 	</div>
 	<!-- end sidebar -->
@@ -389,8 +241,8 @@
 					<p>
 						<i class="fas fa-tasks"></i>
 					</p>
-					<h3>100+</h3>
-					<p>To do</p>
+					<h3>1</h3>
+					<p>Assignments To do</p>
 				</div>
 			</div>
 
@@ -400,7 +252,7 @@
 						<i class="fas fa-spinner"></i>
 					</p>
 					<h3>100+</h3>
-					<p>In progress</p>
+					<p>In Evaluation</p>
 				</div>
 			</div>
 
@@ -410,7 +262,7 @@
 						<i class="fas fa-check-circle"></i>
 					</p>
 					<h3>100+</h3>
-					<p>Completed</p>
+					<p>Evaluated</p>
 				</div>
 			</div>
 
@@ -419,8 +271,8 @@
 					<p>
 						<i class="fas fa-bug"></i>
 					</p>
-					<h3>100+</h3>
-					<p>Projects</p>
+					<h3>1</h3>
+					<p>Results</p>
 				</div>
 			</div>
 
@@ -432,94 +284,29 @@
 				<div class="card">
 					<div class="card-header">
 						<h3>
-							Table
+							Assignments
 						</h3>
 						<i class="fas fa-ellipsis-h"></i>
 					</div>
 					<div class="card-content">
 						<table>
 							<thead>
+								<!-- add the logic of assignments here -->
 								<tr>
 									<th>S. No.</th>
-									<th>Assignment</th>
-									<th>About</th>
-								<!--	<th>Status</th> -->
+									<th>Name</th>
+									<th>Course</th>
 									<th>Due date</th>
 								</tr>
 							</thead>
 							<tbody>
-								<tr>
-									<td>1</td>
-									<td>React</td>
-									<td>Tran Anh Tuat</td>
-								<!--	<td>
-										<span class="dot">
-											<i class="bg-success"></i>
-											Completed
-										</span>
-									</td> -->
-									<td>17/07/2020</td>
-								</tr>
-								<tr>
-									<td>2</td>
-									<td>Vue</td>
-									<td>Bui Nhu Sang</td>
-								<!--	<td>
-										<span class="dot">
-											<i class="bg-warning"></i>
-											In progress
-										</span>
-									</td> -->
-									<td>18/07/2020</td>
-								</tr>
-								<tr>
-									<td>3</td>
-									<td>Laravel</td>
-									<td>Phan Nhat Truong</td>
-								<!--	<td>
-										<span class="dot">
-											<i class="bg-warning"></i>
-											In progress
-										</span>
-									</td> -->
-									<td>17/07/2020</td>
-								</tr>
-								<tr>
-									<td>4</td>
-									<td>Django</td>
-									<td>Le Anh Tuan</td>
-								<!--	<td>
-										<span class="dot">
-											<i class="bg-danger"></i>
-											Delayed
-										</span>
-									</td> -->
-									<td>07/07/2020</td>
-								</tr>
-								<tr>
-									<td>5</td>
-									<td>MEAN</td>
-									<td>John Evan</td>
-								<!--	<td>
-										<span class="dot">
-											<i class="bg-primary"></i>
-											Pending
-										</span>
-									</td> -->
-									<td>20/08/2020</td>
-								</tr>
-								<tr>
-									<td>6</td>
-									<td>MERN</td>
-									<td>Robert</td>
-								<!--	<td>
-										<span class="dot">
-											<i class="bg-primary"></i>
-											Pending
-										</span>
-									</td> -->
-									<td>20/08/2020</td>
-								</tr>
+								<% assignments.forEach(function(item, index){ %>
+									<tr>
+										<td><%= assignments.name %></td>
+										<td><%= assignments.course %></td>
+										<td><%= assignments.d %></td>
+									</tr>
+								<% }); %>
 							</tbody>
 						</table>
 					</div>
@@ -555,49 +342,9 @@
 								<div class="bg-primary" style="width:60%"></div>
 							</div>
 						</div>
-					<!--	<div class="progress-wrapper">
-							<p>
-								More than 3 hours
-								<span class="float-right">40%</span>
-							</p>
-							<div class="progress">
-								<div class="bg-warning" style="width:40%"></div>
-							</div>
-						</div>
-						<div class="progress-wrapper">
-							<p>
-								More than 6 hours
-								<span class="float-right">20%</span>
-							</p>
-							<div class="progress">
-								<div class="bg-danger" style="width:20%"></div>
-							</div>
-						</div> -->
-					</div>
-				</div>
-			</div>
-		</div>
 
-		<!--this is chart code -->
-	<!--	<div class="row">
-			<div class="col-12 col-m-12 col-sm-12">
-				<div class="card">
-					<div class="card-header">
-						<h3>
-							Chartjs
-						</h3>
-					</div>
-					<div class="card-content">
-						<canvas id="myChart"></canvas>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div> -->
-	<!-- end main content -->
-	<!-- import script -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
-	<script src="/javascript/student_dashboard.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+	<script type="text/javascript" src="/javascript/student_dashboard.js"></script>
 	<!-- end import script -->
 </body>
 </html>
