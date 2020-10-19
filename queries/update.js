@@ -1,6 +1,8 @@
-var sql = "UPDATE customers SET address = 'Canyon 123' WHERE address = 'Valley 345'";
-con.query(sql, function (err, result) {
-    if (err) throw err;
-      console.log(result.affectedRows + " record(s) updated");
-})
-export default sql;
+const con = require('../democonnection')
+const sql = "SELECT * FROM student";
+con.query(sql, function (err, result, fields) {
+  if (err) throw err;
+  Result = result;
+  // console.log(fields);
+});
+module.exports  = Result

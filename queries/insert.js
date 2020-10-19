@@ -1,7 +1,9 @@
-var sql = "INSERT INTO student (,name, address) VALUES ('Company Inc', 'Highway 37')";
-  con.query(sql, function (err, result) {
-    if (err) throw err;
-    console.log("1 record inserted");
-  });
-
-  export default sql
+const con = require('../democonnection')
+const sql = "SELECT * FROM student";
+var Result;
+con.query(sql, function (err, result, fields) {
+  if (err) throw err;
+  Result = result;
+  // console.log(fields);
+});
+module.exports  = Result

@@ -1,6 +1,9 @@
-var sql = "DELETE FROM customers WHERE address = 'Mountain 21'";
-con.query(sql, function (err, result) {
+const con = require('../democonnection')
+const sql = "SELECT * FROM student";
+var Result;
+con.query(sql, function (err, result, fields) {
   if (err) throw err;
-  console.log("Number of records deleted: " + result.affectedRows);
+  Result = result;
+  // console.log(fields);
 });
-export default sql;
+module.exports  = Result
