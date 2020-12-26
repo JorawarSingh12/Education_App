@@ -1,11 +1,11 @@
 :root {
-	--primary-color: #4834d4;
-	--success-color: #6ab04c;
-	--warning-color: #f0932b;
-	--danger-color: #eb4d4b;
+	--primary-color:  #f53a37; 
+	--success-color: #1141df;
+	--warning-color: #f8a444;
+	--danger-color: #5cc230;
 
 	--light-color: #212529;
-	--light-second-color: #727475;
+	--light-second-color: #656e72;
 	--light-background: #ffffff;
 	--light-second-background: #f1f1f1;
 
@@ -367,6 +367,7 @@ body {
 }
 
 .row {
+	margin-top: 3rem;
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: row;

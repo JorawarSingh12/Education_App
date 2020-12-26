@@ -1,23 +1,22 @@
-var express = require('express'); 
-var Router = express.Router(); 
-   
-Router.route('/') 
-.all((req, res, next) => {  
-    res.statusCode = 200; 
-    res.set({'Content-Type': 'text/html'} ); 
-    next(); 
-}) 
-.get((req, res, next) => { 
+const express = require('express'); 
+var router = express.Router(); 
+const passport = require('passport');
+const { forwardAuthenticated } = require('../config/auth');
+
+
+
+router.get("/",forwardAuthenticated, (req, res,next) => { 
     res.render('login') 
+    
 }) 
-.post((req, res, next) => { 
-    res.end('When a POST request is made, then this is the response sent to the client!'); 
+
+router.post("/",  (req, res, next) => { 
+    
+    passport.authenticate('local', {
+        successRedirect: '/student_dashboard',
+        failureRedirect: '/login',
+        failureFlash: true
+      })(req, res, next);
 }) 
-.put((req, res, next) => { 
-    res.end('When a PUT request is made, then this is the response sent to the client!'); 
-}) 
-.delete((req, res, next) => { 
-    res.end('When a DELETE request is made, then is the response sent to the client!'); 
-}); 
       
-module.exports = Router; 
+module.exports = router; 
