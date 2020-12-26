@@ -5,14 +5,10 @@ const InstitutionSchema = new Schema({
     name: {
         type: String,
         required: [true, 'Name field is required'],
-        min:6,
-        max:255
     },
     email:{
         type: String,
         required: [true, 'Email field is required'],
-        min:6,
-        max:255
     },
     password:{
         type: String,
@@ -20,11 +16,12 @@ const InstitutionSchema = new Schema({
         min:6,
         max:255
     },
-    class: {
-        type: String
+    classes: {
+        type: Array,
     },
-    institution: {
-        type: String
+    emailVerified:{
+        type: Boolean,
+        default: false
     }
 });
 

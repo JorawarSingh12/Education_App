@@ -4,13 +4,14 @@ module.exports = {
         return next();
       }
       req.flash('error_msg', 'Please log in to view that resource');
-      res.redirect('/users/login');
+      res.redirect('/login');
     },
     forwardAuthenticated: function(req, res, next) {
+      if(req.user)
+        res.redirect('/student_dashboard');      
       if (!req.isAuthenticated()) {
         return next();
       }
-      console.log(req,req.user)
-      res.redirect('/student_dashboard/123');      
+
     }
   };

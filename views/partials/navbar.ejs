@@ -18,14 +18,14 @@
                 <i class="fas fa-sun light-icon"></i>
             </a>
         </li>
-        <li class="nav-item dropdown">
+        <li class="nav-item dropdown" style="margin-left: 5px;">
             <a class="nav-link">
                 <i class="fas fa-bell dropdown-toggle" data-toggle="notification-menu"></i>
-                <span class="navbar-badge">15</span>
+                <span class="navbar-badge">3</span>
             </a>
-            <ul id="notification-menu" class="dropdown-menu notification-menu">
+            <ul id="notification-menu" class="dropdown-menu notification-menu" >
                 <div class="dropdown-menu-header">
-                    <span>
+                    <span >
                         Notifications
                     </span>
                 </div>
@@ -44,34 +44,8 @@
                             </span>
                         </a>
                     </li>
-                    <li class="dropdown-menu-item">
-                        <a href="#" class="dropdown-menu-link">
-                            <div>
-                                <i class="fas fa-tasks"></i>
-                            </div>
-                            <span>
-                                Assignement two.
-                                <br>
-                                <span>
-                                    15/07/2020
-                                </span>
-                            </span>
-                        </a>
-                    </li>
-                    <li class="dropdown-menu-item">
-                        <a href="#" class="dropdown-menu-link">
-                            <div>
-                                <i class="fas fa-gift"></i>
-                            </div>
-                            <span>
-                                Assignement three.
-                                <br>
-                                <span>
-                                    15/07/2020
-                                </span>
-                            </span>
-                        </a>
-                    </li>
+                
+                   
                     <li class="dropdown-menu-item">
                         <a href="#" class="dropdown-menu-link">
                             <div>
@@ -86,37 +60,11 @@
                             </span>
                         </a>
                     </li>
-                    <li class="dropdown-menu-item">
-                        <a href="#" class="dropdown-menu-link">
-                            <div>
-                                <i class="fas fa-gift"></i>
-                            </div>
-                            <span>
-                                Assignement five.
-                                <br>
-                                <span>
-                                    15/07/2020
-                                </span>
-                            </span>
-                        </a>
-                    </li>
-                    <li class="dropdown-menu-item">
-                        <a href="#" class="dropdown-menu-link">
-                            <div>
-                                <i class="fas fa-tasks"></i>
-                            </div>
-                            <span>
-                                Assignement six.
-                                <br>
-                                <span>
-                                    15/07/2020
-                                </span>
-                            </span>
-                        </a>
-                    </li>
+                    
+                   
                 </div>
                 <div class="dropdown-menu-footer">
-                    <span>
+                    <span >
                         View all notifications
                     </span>
                 </div>
@@ -124,7 +72,7 @@
         </li>
         <li class="nav-item avt-wrapper">
             <div class="avt dropdown">
-                <span class="dropdown-toggle" data-toggle="user-menu" style="margin-left: 5px; margin-right: 15px;justify-items: center; font-size: 2rem; margin-top: 5px;  border-radius: 50%; "><%= student.name.substr(0,1) %></span>
+                <button class="dropdown-toggle dropdown-btn" data-toggle="user-menu"> <%= student.name.substr(0,1) %></button>
                 <ul id="user-menu" class="dropdown-menu">
                     <li  class="dropdown-menu-item">
                         <a class="dropdown-menu-link">

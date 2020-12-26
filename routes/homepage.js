@@ -1,8 +1,9 @@
 var express = require('express'); 
 var Router = express.Router(); 
-   
-Router.route('/') 
-.get((req, res) => { 
+const { forwardAuthenticated } = require('../config/auth');
+
+
+Router.get('/',forwardAuthenticated,(req, res) => { 
     res.render('home'); 
 }) 
    

@@ -1,8 +1,7 @@
 <%- include ('partials/header.ejs') %>
 	<title>Register</title>
 	<link rel="stylesheet" type="text/css" href="/css/style.css">
-	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
-	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
+		
 </head>
 <body>
 	<div style="position: relative; margin-top: 1.4rem; margin-right: 10rem;">
@@ -19,8 +18,7 @@
 	  <form action="/register" method="POST">
 		<%- include ('partials/messages.ejs') %>
 		<link rel="stylesheet" type="text/css" href="/css/style.css">
-	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
-	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
+
 				<img src="/img/avatar.svg">
 				<h2 class="title">Register</h2>
            		<div class="input-div one">
@@ -49,13 +47,34 @@
            		    	<h5>Password</h5>
            		    	<input type="password" class="input" name="password" required>
             	   </div>
-            	</div>
+				</div>
+				<div class="input-div pass">
+					<div class="i"> 
+						 <i class="fas fa-lock"></i>
+					</div>
+					<div class="div">
+						 <h5>Confirm Password</h5>
+						 <input type="password" class="input" name="confirm_password" required>
+				 </div>
+			  </div>
+		
+			  <div class="input-div pass">
+				<div class="i"> 
+					 <i class="fas fa-lock"></i>
+				</div>
+	<select class="div " name="type" >
+  <option value="student">Student</option>
+  <option value="teacher">Teacher</option>
+  <option value="institution">Institution</option>
+</select>
+		  </div>
+
               <input type="submit" class="btn"  value="Register">
               <a href="/login">Already have an account</a>
             </form>
         </div>
         
       </div>
-
+	  <%- include ('partials/footer.ejs') %>
     <script type="text/javascript" src="/js/form_register_login.js"></script>
-	<%- include ('partials/footer.ejs') %>
+	

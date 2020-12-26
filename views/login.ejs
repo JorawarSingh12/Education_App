@@ -1,20 +1,22 @@
 <%- include ('partials/header.ejs') %>
-	<title>Login</title>
+	<title>Login Page</title>
 	<link rel="stylesheet" type="text/css" href="/css/style.css">
-	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
-	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/a81368914c.js"></script>
 
 	<body>
-	
-		<div style="position: relative; margin-top: 1.4rem; margin-right: 10rem;">
+
+		<div style="position: relative; margin-top: 1.5rem; margin-right: 10.5rem;">
 			<a href="/"><img src="/img/logo.png" width="30rem" height="30rem"> <span
-					style="text-align: center; font-size: 1.4rem; color: black; font-weight: bold; font-family: Poppins, sans-serif; ">
+					style="text-align: center; font-size: 1.5rem; color: black; font-weight: bold; font-family: Poppins, sans-serif; ">
 					Education App
 				</span>
 			</a>
 
 		</div>
-		
+
 		<img class="wave" src="img/wave.png">
 		<div class="container">
 			<div class="img">
@@ -24,32 +26,30 @@
 
 				<form action="/login" method="POST">
 					<%- include ('partials/messages.ejs') %>
-					<link rel="stylesheet" type="text/css" href="/css/style.css">
-	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
-	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
-					<img src="/img/Institution_Logo.png">
-					<h2 class="title">Login</h2>
-					<div class="input-div one">
-						<div class="i">
-							<i class="fas fa-user"></i>
+						<link rel="stylesheet" type="text/css" href="/css/style.css">
+						<img src="/img/Teacher_logo.png">
+						<h2 class="title">Login</h2>
+						<div class="input-div one">
+							<div class="i">
+								<i class="fas fa-user"></i>
+							</div>
+							<div class="div">
+								<h5>Email</h5>
+								<input type="text" class="input" name="email">
+							</div>
 						</div>
-						<div class="div">
-							<h5>Email</h5>
-							<input type="text" class="input" name="email">
+						<div class="input-div pass">
+							<div class="i">
+								<i class="fas fa-lock"></i>
+							</div>
+							<div class="div">
+								<h5>Password</h5>
+								<input type="password" class="input" name="password">
+							</div>
 						</div>
-					</div>
-					<div class="input-div pass">
-						<div class="i">
-							<i class="fas fa-lock"></i>
-						</div>
-						<div class="div">
-							<h5>Password</h5>
-							<input type="password" class="input" name="password">
-						</div>
-					</div>
 
-					<input type="submit" class="btn" value="Login">
-					<a href="/register">Register</a>
+						<input type="submit" class="btn" value="Login">
+						<a href="/register">Register</a>
 				</form>
 
 			</div>

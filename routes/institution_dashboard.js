@@ -7,7 +7,7 @@ router.get('/',ensureAuthenticated,(req, res, next) => {
        name: 'Jorawar',
        
    }
-    res.render('teacher_dashboard',{
+    res.render('institution_dashboard',{
         teacher: teacher,
     })  
 }) 

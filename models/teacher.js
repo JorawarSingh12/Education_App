@@ -5,29 +5,31 @@ const TeacherSchema = new Schema({
     name: {
         type: String,
         required: [true, 'Name field is required'],
-        min:6,
-        max:255
+    
     },
     email:{
         type: String,
         required: [true, 'Email field is required'],
-        min:6,
-        max:255
+    
     },
     password:{
         type: String,
         required: true,
-        min:6,
-        max:255
+
     },
-    class: {
-        type: String
+    classes: {
+        type: Array,
     },
-    institution: {
-        type: String
+    institutions: {
+        type: Array,
+
+    },
+    emailVerified:{
+        type: Boolean,
+        default: false
     }
 });
 
-const Tacher = mongoose.model('teacher', TeacherSchema);
+const Teacher = mongoose.model('teacher', TeacherSchema);
 
 module.exports = Teacher;
