@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const AssignmentSchema = require('./assignment');
 const Schema = mongoose.Schema;
 
 const SubjectSchema = new Schema({
@@ -6,14 +7,8 @@ const SubjectSchema = new Schema({
         type: String,
         required: [true, 'Name field is required'],
     },
-    class:{
-        type: String,
-    },
-    teacher:{
-        type: String,
-    },
     assignments:{
-        type: Array,
+        type: [AssignmentSchema],
     },
     dateCreated:{
         type: Date,
@@ -23,6 +18,4 @@ const SubjectSchema = new Schema({
 
 );
 
-const Subject = mongoose.model('subject', SubjectSchema);
-
-module.exports = Subject;
+module.exports = SubjectSchema;

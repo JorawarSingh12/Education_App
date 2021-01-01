@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const SubjectSchema = require('./subject');
 const Schema = mongoose.Schema;
 
 const ClassSchema = new Schema({
@@ -6,22 +7,13 @@ const ClassSchema = new Schema({
         type: String,
         required: [true, 'Name field is required'],
     },
-    students: {
-        type: Array,
-    },
-    section:{
-        type: String,
-    },
-    institution:{
-        type: String,
-    },
+    students: Array,
+    section: String,
+    subjects: [SubjectSchema],
     dateCreated:{
         type: Date,
         default: Date.now()
     },
 }
 );
-
-const Class = mongoose.model('class', ClassSchema);
-
-module.exports = Class;
+module.exports = ClassSchema;

@@ -71,7 +71,16 @@
 								<option value="institution">Institution</option>
 							</select>
 						</div>
-
+						<div class="input-div pass">
+							<div class="i">
+								<i class="fas fa-lock"></i>
+							</div>
+							<select name="institution" > 
+								<% for(var i = 0; i < institutions.length; i++) { %>
+								  <option value='<%= institutions[i]._id %>'><%= institutions[i].name  %></option>
+								<% } %>
+							  </select>
+						</div>
 						<input type="submit" class="btn" value="Register">
 						<a href="/login/student">Already have an account</a>
 				</form>

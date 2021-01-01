@@ -6,6 +6,7 @@ const {  ensureAuthenticated } = require('../config/auth');
 
 
 router.get("/",ensureAuthenticated, (req, res,next) => { 
+    
     res.render('profile',{type: req.user.type})
 }) 
 

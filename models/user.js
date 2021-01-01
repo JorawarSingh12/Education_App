@@ -23,6 +23,9 @@ const UserSchema = new Schema({
     },
     type:{
         type: String,   
+    },
+    institution:{
+     type: String,   
     }
 });
 

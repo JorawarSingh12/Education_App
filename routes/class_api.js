@@ -1,26 +1,22 @@
 const express = require('express');
 const router = express.Router();
-const Class= require('../models/class');
+const Student = require('../models/student');
 const Institution = require('../models/institution');
+const ClassSchema = require('../models/class');
 
-// update a ninja in the db
+// create new class in the db
 router.post('/', function (req, res, next) {
-    Class.create(req.body)
-    .then( (cl) =>{
-        Institution.findByIdAndUpdate( req.user._id,{institution:  req.body.institution}, function(err,model){
-            if (err)  throw err
-            res.redirect("/profile")
-            console.log("Updated User : ", model); 
-        } )
+    var Class = mongoose.model('teacher',ClassSchema);
+    var cl = new Class({
+        name: user.name
     })
-        
+    Institution.findByIdAndUpdate(req.body.institution,
+        {
+            $push: { classes: cl }
+        }, function (err, mod) {
+            if (err) console.log(err)
+        })
 });
 
-
-router.get('/logout', (req, res) => {
-    req.logout();
-    req.flash('success_msg', 'You are logged out');
-    res.redirect('/');
-  });
 
 module.exports = router;

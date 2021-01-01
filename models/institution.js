@@ -1,18 +1,22 @@
 const mongoose = require('mongoose');
+const ClassSchema = require('./class');
+const StudentSchema = require('./student');
+const TeacherSchema = require('./teacher');
 const Schema = mongoose.Schema;
 
 const InstitutionSchema = new Schema({
-    _id:{
+    name: {
         type: String,
+        required: [true, 'Name field is required'],
     },
     classes: {
-        type: Array,
+        type: [ClassSchema],
     },
     teachers:{
-        type: Array,
+        type: [TeacherSchema],
     },
     students:{
-        type: Array,
+        type: [StudentSchema],
     }
 }
 );

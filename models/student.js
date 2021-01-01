@@ -3,18 +3,10 @@ const Schema = mongoose.Schema;
 
 // create ninja Schema & model
 const StudentSchema = new Schema({
-    _id:{
-        type: String,
-    },
+    name: String,
     classes: {
         type: Array,
-    },
-    institution:{
-        type: String,
-    },
-}
-);
+    }
+});
 
-const Student = mongoose.model('student', StudentSchema);
-
-module.exports = Student;
+module.exports = StudentSchema;
