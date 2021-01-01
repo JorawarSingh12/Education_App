@@ -6,22 +6,22 @@ const ClassSchema = new Schema({
         type: String,
         required: [true, 'Name field is required'],
     },
-    studentsSubmitted: {
+    students: {
         type: Array,
     },
-    subjects:{
+    section:{
+        type: String,
+    },
+    institution:{
         type: String,
     },
     dateCreated:{
         type: Date,
         default: Date.now()
     },
-    dateEnded:{
-        type: Date,
-    }
 }
 );
 
-const Assignment = mongoose.model('assignment', AssignmentSchema);
+const Class = mongoose.model('class', ClassSchema);
 
-module.exports = Assignment;
+module.exports = Class;

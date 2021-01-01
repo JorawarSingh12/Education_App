@@ -41,15 +41,18 @@ app.use(function(req, res, next) {
 app.use("/",require('./routes/homepage'))
 app.use("/login",require('./routes/login'))
 app.use("/register",require('./routes/register'))
-app.use("/student_dashboard",require('./routes/student_dashboard'))
-app.use("/teacher_dashboard",require('./routes/student_dashboard'))
-app.use('/studentapi', require('./routes/studentApi'));
-
+app.use("/dashboard",require('./routes/dashboard'))
+app.use('/new_class', require('./routes/new_class'));
+app.use('/new_subject', require('./routes/new_subject'));
+app.use('/profile', require('./routes/profile'));
+app.use('/student_api', require('./routes/student_api'));
+app.use('/institution_api', require('./routes/institution_api'));
 
 app.use(function(err, req, res, next){
   console.log(err); // to see properties of message in our console
   res.status(422).send({error: err.message});
 });
+
 
 app.listen(5000, () => {
     console.log(`Example app listening at 5000`)

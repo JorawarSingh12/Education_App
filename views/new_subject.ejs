@@ -1,0 +1,72 @@
+<%- include ('partials/header') %>
+
+    <title>New Class </title>
+
+
+    <link rel="stylesheet" type="text/css" href="/css/student_dashboard.css">
+
+    <body class="overlay-scrollbar">
+        <%- include ('partials/messages.ejs') %>
+        <!-- navbar -->
+        <%- include ('partials/navbar.ejs') %>
+            <!-- end navbar -->
+
+
+            <!-- sidebar -->
+            <%- include ('partials/sidebar.ejs') %>
+                <!-- end sidebar -->
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+                        
+                <!-- main content -->
+                <div class="container">
+                    <div class="img">
+                        <img src="/img/Teacher_logo.png">
+                    </div>
+                    <div class="login-content">
+
+                        <form action="/new_subject" method="POST">
+                            
+                                <h2 class="title">Add Subject</h2>
+                                <div class="input-div one">
+                                    <div class="i">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <div class="div">
+                                        <h5>Class Name</h5>
+                                        <input type="text" class="input" name="name">
+                                    </div>
+                                </div>
+                                <div class="input-div one">
+                                    <div class="i">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <div class="div">
+                                        <h5>Select Class</h5>
+                                        <input type="text" class="input" name="name">
+                                    </div>
+                                </div>
+                                
+                                <!-- remove this and add it in the validation of creating class -->
+                                <div class="input-div pass" hidden>
+                                    <div class="i">
+                                        <i class="fas fa-lock"></i>
+                                    </div>
+                                    <div class="div">
+                                        <h5> Teacher</h5>
+                                        <input type="text" class="input" name="teacher" 
+                                        value = <%= teacher._id %> >
+                                    </div>
+                                </div>
+                                <input type="submit" class="btn" value="Create">
+                        </form>
+                    </div>
+                </div>
+    </body>
+
+    <script type="text/javascript" src="/js/form_register_login.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <script type="text/javascript" src="/js/student_dashboard.js"></script>
+    
+
+    <!-- end import script -->
+    <%- include ('partials/footer.ejs') %>

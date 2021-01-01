@@ -1,10 +1,10 @@
 <%- include ('partials/header.ejs') %>
 	<title>Login Page</title>
 	<link rel="stylesheet" type="text/css" href="/css/style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
-        <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<!-- <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet"> -->
+	<!-- <script src="https://kit.fontawesome.com/a81368914c.js"></script> -->
 
 	<body>
 
@@ -16,8 +16,7 @@
 			</a>
 
 		</div>
-
-		<img class="wave" src="img/wave.png">
+		<img class="wave" src="/img/wave.png">
 		<div class="container">
 			<div class="img">
 				<img src="/img/bg.svg">
@@ -27,33 +26,39 @@
 				<form action="/login" method="POST">
 					<%- include ('partials/messages.ejs') %>
 						<link rel="stylesheet" type="text/css" href="/css/style.css">
-						<img src="/img/Teacher_logo.png">
-						<h2 class="title">Login</h2>
-						<div class="input-div one">
-							<div class="i">
-								<i class="fas fa-user"></i>
-							</div>
-							<div class="div">
-								<h5>Email</h5>
-								<input type="text" class="input" name="email">
-							</div>
-						</div>
-						<div class="input-div pass">
-							<div class="i">
-								<i class="fas fa-lock"></i>
-							</div>
-							<div class="div">
-								<h5>Password</h5>
-								<input type="password" class="input" name="password">
-							</div>
-						</div>
 
-						<input type="submit" class="btn" value="Login">
-						<a href="/register">Register</a>
+						<% if( type==='student' ) { %>
+							<img src="/img/avatar.svg">
+							<% } else if( type==='teacher' ) { %>
+								<img src="/img/Teacher_logo.png">
+								<% } else { %>
+									<img src="/img/Institution_logo.png">
+									<% } %>
+										<h2 class="title">Login</h2>
+										<div class="input-div one">
+											<div class="i">
+												<i class="fas fa-user"></i>
+											</div>
+											<div class="div">
+												<h5>Email</h5>
+												<input type="text" class="input" name="email">
+											</div>
+										</div>
+										<div class="input-div pass">
+											<div class="i">
+												<i class="fas fa-lock"></i>
+											</div>
+											<div class="div">
+												<h5>Password</h5>
+												<input type="password" class="input" name="password">
+											</div>
+										</div>
+										<input type="text" name="type" 
+										value= <%= type %>  >
+										<input type="submit" class="btn" value="Login">
+										<a href="/register">Register</a>
 				</form>
-
 			</div>
-
 		</div>
 
 		<script type="text/javascript" src="/js/form_register_login.js"></script>

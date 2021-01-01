@@ -1,6 +1,8 @@
 <%- include ('partials/header') %>
 
     <link rel="stylesheet" href="/css/home.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <title>Education App</title>
 </head>
@@ -22,21 +24,26 @@
                             <a class="nav-link" href="#">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">About us</a>
+                            <a class="nav-link" href="#price_body">Pricing</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Work</a>
+                            <a class="nav-link" href="#">About Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Info</a>
+                            <a class="nav-link" href="#testimonial_body">Testimonials</a>
+                        </li>
+                        <li class="nav-item">
+                            <a  href="/register">
+                            <button class="nav-link dropbtn" style="background-color: #2598da; color: white; margin-left: 1.5rem; margin-right: 1.5rem;" >Signin </button>
+                        </a>
                         </li>
                         <li class="nav-item">
                             <div class="dropdown">
-                                <button class="nav-link dropbtn" style="background-color: #25da2e; color: white;" class="dropbtn">Login </button>
+                                <button class="nav-link dropbtn" style="background-color: #2598da; color: white;" class="dropbtn">Login </button>
                                 <div class="dropdown-content">
-                                    <a class="nav-link" href="/login">Institution</a>
-                                    <a class="nav-link" href="/login">Teacher</a>
-                                    <a class="nav-link" href="/login">Student</a>
+                                    <a class="nav-link" href="/login/institution">Institution</a>
+                                    <a class="nav-link" href="/login/teacher">Teacher</a>
+                                    <a class="nav-link" href="/login/student">Student</a>
                                 </div>
                             </div>
                             <!-- <a class="nav-link "  href="/login"></a> -->
@@ -52,14 +59,15 @@
                 <h2>Team Work</h2>
                 <h3>Process</h3>
                 <p>In Progress</p>
-                <a href="/register">Register Now</a>
+                <a href="#AboutUs_Body">Learn More</a>
             </div>
             <div class="col-12 col-lg-8">
                 <img src="/img/mainbenner.png" alt="Team process banner">
             </div>
         </div>
     </div>
-
+    <%- include ('partials/pricing_section') %>
+    <%- include ('partials/testimonial') %>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
@@ -71,6 +79,4 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
         </script>
-</body>
-
-</html>
+<%- include ('partials/footer') %>

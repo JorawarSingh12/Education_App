@@ -8,7 +8,7 @@ module.exports = {
     },
     forwardAuthenticated: function(req, res, next) {
       if(req.user)
-        res.redirect('/student_dashboard');      
+        res.redirect('/dashboard');      
       if (!req.isAuthenticated()) {
         return next();
       }

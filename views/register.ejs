@@ -1,80 +1,82 @@
 <%- include ('partials/header.ejs') %>
 	<title>Register</title>
 	<link rel="stylesheet" type="text/css" href="/css/style.css">
-		
-</head>
-<body>
-	<div style="position: relative; margin-top: 1.4rem; margin-right: 10rem;">
-		<a  href="/"><img src = "/img/logo.png"  width="20rem" height="20rem"> <span  style="text-align: center; font-size: 1.3rem; color: black; font-weight: bold;">Education App</span></a>
-		
-	</div>
-	<img class="wave" src="img/wave.png">
-	<div class="container">
-		<div class="img">
-			<img src="/img/bg.svg">
+
+	</head>
+
+	<body>
+		<div style="position: relative; margin-top: 1.4rem; margin-right: 10rem;">
+			<a href="/"><img src="/img/logo.png" width="20rem" height="20rem"> <span
+					style="text-align: center; font-size: 1.3rem; color: black; font-weight: bold;">Education
+					App</span></a>
+
 		</div>
-		<div class="login-content">
-      
-	  <form action="/register" method="POST">
-		<%- include ('partials/messages.ejs') %>
-		<link rel="stylesheet" type="text/css" href="/css/style.css">
+		<img class="wave" src="img/wave.png">
+		<div class="container">
+			<div class="img">
+				<img src="/img/bg.svg">
+			</div>
+			<div class="login-content">
 
-				<img src="/img/avatar.svg">
-				<h2 class="title">Register</h2>
-           		<div class="input-div one">
-           		   <div class="i">
-           		   		<i class="fas fa-user"></i>
-           		   </div>
-           		   <div class="div">
-           		   		<h5>Name</h5>
-           		   		<input type="text" class="input" name="name" required>
-           		   </div>
-               </div>
-               <div class="input-div one">
-                <div class="i">
-                    <i class="fas fa-user"></i>
-                </div>
-                <div class="div">
-                    <h5>Email</h5>
-                    <input type="text" class="input" name="email" required>
-                </div>
-             </div>
-           		<div class="input-div pass">
-           		   <div class="i"> 
-           		    	<i class="fas fa-lock"></i>
-           		   </div>
-           		   <div class="div">
-           		    	<h5>Password</h5>
-           		    	<input type="password" class="input" name="password" required>
-            	   </div>
-				</div>
-				<div class="input-div pass">
-					<div class="i"> 
-						 <i class="fas fa-lock"></i>
-					</div>
-					<div class="div">
-						 <h5>Confirm Password</h5>
-						 <input type="password" class="input" name="confirm_password" required>
-				 </div>
-			  </div>
-		
-			  <div class="input-div pass">
-				<div class="i"> 
-					 <i class="fas fa-lock"></i>
-				</div>
-	<select class="div " name="type" >
-  <option value="student">Student</option>
-  <option value="teacher">Teacher</option>
-  <option value="institution">Institution</option>
-</select>
-		  </div>
+				<form action="/register" method="POST">
+					<%- include ('partials/messages.ejs') %>
+						<link rel="stylesheet" type="text/css" href="/css/style.css">
 
-              <input type="submit" class="btn"  value="Register">
-              <a href="/login">Already have an account</a>
-            </form>
-        </div>
-        
-      </div>
-	  <%- include ('partials/footer.ejs') %>
-    <script type="text/javascript" src="/js/form_register_login.js"></script>
-	
+						<img src="/img/avatar.svg">
+						<h2 class="title">Register</h2>
+						<div class="input-div one">
+							<div class="i">
+								<i class="fas fa-user"></i>
+							</div>
+							<div class="div">
+								<h5>Name</h5>
+								<input type="text" class="input" name="name" required>
+							</div>
+						</div>
+						<div class="input-div one">
+							<div class="i">
+								<i class="fas fa-user"></i>
+							</div>
+							<div class="div">
+								<h5>Email</h5>
+								<input type="text" class="input" name="email" required>
+							</div>
+						</div>
+						<div class="input-div pass">
+							<div class="i">
+								<i class="fas fa-lock"></i>
+							</div>
+							<div class="div">
+								<h5>Password</h5>
+								<input type="password" class="input" name="password" required>
+							</div>
+						</div>
+						<div class="input-div pass">
+							<div class="i">
+								<i class="fas fa-lock"></i>
+							</div>
+							<div class="div">
+								<h5>Confirm Password</h5>
+								<input type="password" class="input" name="confirm_password" required>
+							</div>
+						</div>
+
+						<div class="input-div pass">
+							<div class="i">
+								<i class="fas fa-lock"></i>
+							</div>
+							<select class="div " name="type">
+								<option value="student">Student</option>
+								<option value="teacher">Teacher</option>
+								<option value="institution">Institution</option>
+							</select>
+						</div>
+
+						<input type="submit" class="btn" value="Register">
+						<a href="/login/student">Already have an account</a>
+				</form>
+			</div>
+
+		</div>
+		<%- include ('partials/footer.ejs') %>
+			<script type="text/javascript" src="/js/form_register_login.js"></script>
