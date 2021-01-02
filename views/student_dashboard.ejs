@@ -1,6 +1,6 @@
 <%- include ('partials/header') %>
 
-	<title><%- student.name %>'s Dashboard </title>
+	<title><%- (typeof(user) !== 'undefined')? user.name : A %>'s Dashboard </title>
 
 
 	<link rel="stylesheet" type="text/css" href="/css/student_dashboard.css">

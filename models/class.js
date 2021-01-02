@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const SubjectSchema = require('./subject');
+const TestSchema = require('./test');
 const Schema = mongoose.Schema;
 
 const ClassSchema = new Schema({
@@ -10,6 +11,7 @@ const ClassSchema = new Schema({
     students: Array,
     section: String,
     subjects: [SubjectSchema],
+    tests: [TestSchema],
     dateCreated:{
         type: Date,
         default: Date.now()

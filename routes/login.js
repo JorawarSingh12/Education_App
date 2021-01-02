@@ -5,21 +5,15 @@ const { forwardAuthenticated } = require('../config/auth');
 
 
 
-router.get("/:type",forwardAuthenticated, (req, res,next) => { 
-    // console.log(req.params.type)
-    const type = req.params.type;
-    if(type === 'student' || type === 'teacher' || type === 'institution')
-        res.render('login',{type:req.params.type}) 
-    else{
-        res.redirect('/')
-    }
+router.get("/",forwardAuthenticated, (req, res,next) => { 
+        res.render('login') 
 }) 
 
 router.post("/",  (req, res, next) => { 
-    // console.log(req.body)
+ 
     passport.authenticate('local', {
         successRedirect: '/dashboard',
-        failureRedirect: '/',
+        failureRedirect: '/register',
         failureFlash: true
       })(req, res, next);
 }) 

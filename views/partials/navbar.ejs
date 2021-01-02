@@ -75,15 +75,11 @@
         <li class="nav-item avt-wrapper">
             <div class="avt dropdown">
                 <button class="dropdown-toggle dropdown-btn" data-toggle="user-menu">
-                    <% if(typeof(teacher) !== 'undefined') {%>
-                    <%=    teacher.name.substr(0,1) %>
-                    <%} else if(typeof(student) !== 'undefined'){ %>
-                    <%=       student.name.substr(0,1) %>
-                    <%} else if(typeof(institution) !== 'undefined'){ %>
-                    <%=  institution.name.substr(0,1) %>
-                    <%} else { %>
-                        J
-                    <%} %>
+                    <% if( typeof(user) !== 'undefined'){   %>
+                    <%= user.name.substr(0,1) %>
+                    <% } else{ %>
+                        A
+                    <% } %>
                 </button>
                 <ul id="user-menu" class="dropdown-menu">
                     <li  class="dropdown-menu-item">
@@ -95,7 +91,7 @@
                         </a>
                     </li>
                     <li  class="dropdown-menu-item">
-                        <a href="/student_api/logout" class="dropdown-menu-link">
+                        <a href="/logout" class="dropdown-menu-link">
                             <div>
                                 <i class="fas fa-sign-out-alt"></i>
                             </div>

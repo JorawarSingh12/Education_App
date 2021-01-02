@@ -1,24 +1,33 @@
 const express = require('express'); 
 var router = express.Router(); 
-const { forwardAuthenticated } = require('../config/auth');
-const Class = require('../models/class');
+const { ensureAuthenticated } = require('../config/auth');
+const mongoose = require('mongoose');
+const ClassSchema = require('../models/class');
+const Institution = require('../models/institution');
 
 
-router.get("/", (req, res) => { 
+router.get("/",ensureAuthenticated, (req, res) => { 
     console.log(req.user)
-    res.render('new_class',{institution: req.user})    
-
+    if(req.user.type == "institution")
+        res.render('new_class',{institution: req.user})    
+    else
+        res.redirect("/dashboard")
 }) 
 
 router.post('/', function (req, res, next) {
-    console.log(req.body)
-    Class.create(req.body)
-    .then(function (user) {
-        req.flash(
-            'success_msg',
-            'Class Successfully created and students will be notified shortly'
-          );
-        res.redirect("/new_class");
-    })
+    // console.log(req.body)
+    var Clss = mongoose.model('class',ClassSchema);
+    var cl = new Clss(req.body)
+    Institution.findByIdAndUpdate(req.user._id,
+        {
+            $push: { classes: cl }
+        }, function (err, mod) {
+            if (err) console.log(err)
+            req.flash(
+                'success_msg',
+                'New Class Created !'
+            );
+            res.redirect("/dashboard")
+        })
 })
 module.exports = router; 

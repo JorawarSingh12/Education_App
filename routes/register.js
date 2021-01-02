@@ -75,7 +75,7 @@ router.post('/', function (req, res, next) {
                                     'success_msg',
                                     'You are now registered and can log in'
                                 );
-                                res.redirect("/login/" + req.body.type);
+                                res.redirect("/login/" );
                             })
                             .catch(err => console.log(err));
                     })

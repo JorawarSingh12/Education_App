@@ -26,14 +26,7 @@
 				<form action="/login" method="POST">
 					<%- include ('partials/messages.ejs') %>
 						<link rel="stylesheet" type="text/css" href="/css/style.css">
-
-						<% if( type==='student' ) { %>
-							<img src="/img/avatar.svg">
-							<% } else if( type==='teacher' ) { %>
-								<img src="/img/Teacher_logo.png">
-								<% } else { %>
 									<img src="/img/Institution_logo.png">
-									<% } %>
 										<h2 class="title">Login</h2>
 										<div class="input-div one">
 											<div class="i">
@@ -53,8 +46,8 @@
 												<input type="password" class="input" name="password">
 											</div>
 										</div>
-										<input type="text" name="type" 
-										value= <%= type %>  >
+			
+										
 										<input type="submit" class="btn" value="Login">
 										<a href="/register">Register</a>
 				</form>

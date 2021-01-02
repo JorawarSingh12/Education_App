@@ -8,15 +8,19 @@
 </head>
 
 <body>
-    <div class="container">
-        <header class="head my-3">
-            <nav class="navbar navbar-expand-lg navbar-light head__custom-nav">
+    <div class="container" style="position: sticky;
+    position: -webkit-sticky;
+    top: 0; /* required */
+    z-index: 1000;
+    background-color: whitesmoke;" >
+        <header class="head my-3" >
+            <nav class="navbar navbar-expand-lg navbar-light head__custom-nav" >
                 <a class="navbar-brand d-flex align-items-center" href="/">
                     <img src="/img/logo.png" alt="website logo">
                     <span>Education App</span>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
-                    <span><img src="/img/menu.png" alt=""></span>
+                    <span><i class="fas fa-bars"></i></span>
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul class="navbar-nav">
@@ -33,20 +37,10 @@
                             <a class="nav-link" href="#testimonial_body">Testimonials</a>
                         </li>
                         <li class="nav-item">
-                            <a  href="/register">
-                            <button class="nav-link dropbtn" style="background-color: #2598da; color: white; margin-left: 1.5rem; margin-right: 1.5rem;" >Signin </button>
-                        </a>
+                            <a class="nav-link" href="/register">SignUp</a>
                         </li>
                         <li class="nav-item">
-                            <div class="dropdown">
-                                <button class="nav-link dropbtn" style="background-color: #2598da; color: white;" class="dropbtn">Login </button>
-                                <div class="dropdown-content">
-                                    <a class="nav-link" href="/login/institution">Institution</a>
-                                    <a class="nav-link" href="/login/teacher">Teacher</a>
-                                    <a class="nav-link" href="/login/student">Student</a>
-                                </div>
-                            </div>
-                            <!-- <a class="nav-link "  href="/login"></a> -->
+                            <a class="nav-link" href="/login">LogIn</a>
                         </li>
                     </ul>
                 </div>

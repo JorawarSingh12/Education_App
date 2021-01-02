@@ -5,11 +5,11 @@ var Router = express.Router();
 Router.get('/',ensureAuthenticated,(req, res, next) => { 
     console.log(req.user)
     if(req.user.type === 'student')
-        res.render('student_dashboard',{student:req.user});
+        res.render('student_dashboard',{user:req.user});
     else if(req.user.type === 'teacher')
-         res.render('teacher_dashboard',{teacher:req.user});
+         res.render('teacher_dashboard',{user:req.user});
          else if(req.user.type === 'institution')
-         res.render('institution_dashboard',{institution:req.user});
+         res.render('institution_dashboard',{user:req.user});
     else 
         res.render('error_page')
 }) 

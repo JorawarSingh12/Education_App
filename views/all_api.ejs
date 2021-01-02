@@ -1,0 +1,89 @@
+<%- include ('partials/header') %>
+
+  <title> Dashboard </title>
+
+
+  <link rel="stylesheet" type="text/css" href="/css/student_dashboard.css">
+
+  <body class="overlay-scrollbar">
+    <!-- navbar -->
+    <%- include ('partials/navbar.ejs') %>
+      <!-- end navbar -->
+
+
+      <!-- sidebar -->
+      <%- include ('partials/institution_sidebar.ejs') %>
+        <!-- end sidebar -->
+ 
+
+        <!-- main content -->
+        <div class="wrapper">
+
+
+          <!-- This is table part code  -->
+          <div class="row">
+            <div class="col-11 col-m-12 col-sm-12">
+              <div class="card">
+                <div class="card-header">
+                  <h3>
+                    <%= type %>
+                  </h3>
+                  <i class="fas fa-ellipsis-h"></i>
+                </div>
+                <div class="card-content">
+                  <table>
+                    <thead>
+                      <!-- add the logic of assignments here -->
+                      <tr>
+                        <th>S. No.</th>
+                        <th>Name</th>
+                        <% if(type === 'classes' ){ %>
+                          <th> Section</th>
+                          <% } %>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <% for(var i=0; i < result.length; i++) { %>
+                        <tr>
+                          <td>
+                            <%= i+1 %>
+                          </td>
+                          <td>
+                            <%= result[i].name %>
+                          </td>
+                          <% if(type === 'classes' ){ %>
+                            <td>
+                              <%= result[i].section %>
+                            </td>
+                            <% } %>
+                        </tr>
+                        <% } %>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+          <!-- this is progress bar code  -->
+          <div class="card-deck">
+            <% for(var i=0; i < result.length; i++) { %>
+              <div class="card">
+                <img  src="/img/avatar.svg" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title"> <%= result[i].name %></h5>
+                  <p class="card-text">This is sample text.</p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">Last updated 3 mins ago</small>
+                </div>
+              </div>              
+                 <% } %>            
+                </div>
+          </div>
+
+          <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+          <script type="text/javascript" src="/js/student_dashboard.js"></script>
+          <!-- end import script -->
+          <%- include ('partials/footer.ejs') %>

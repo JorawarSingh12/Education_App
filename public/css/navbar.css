@@ -4,15 +4,15 @@
 	--warning-color: #e49234;
 	--danger-color: #42b611;
 
-	--light-color: #212529;
+	--light-color: #292d31;
 	--light-second-color: #656e72;
 	--light-background: #ffffff;
 	--light-second-background: #f1f1f1;
 
 	--dark-color: #726464;
 	--dark-second-color: #72747c;
-	--dark-background: #2c2d36;
-	--dark-second-background: #181818;
+	--dark-background: #363741;
+	--dark-second-background: #302d2d;
 }
 
 .light {

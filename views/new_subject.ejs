@@ -20,7 +20,7 @@
                 <!-- main content -->
                 <div class="container">
                     <div class="img">
-                        <img src="/img/Teacher_logo.png">
+                        <img src="/img/Teacher_Logo.png">
                     </div>
                     <div class="login-content">
 
@@ -32,30 +32,19 @@
                                         <i class="fas fa-user"></i>
                                     </div>
                                     <div class="div">
-                                        <h5>Class Name</h5>
+                                        <h5>Subject Name</h5>
                                         <input type="text" class="input" name="name">
                                     </div>
                                 </div>
-                                <div class="input-div one">
-                                    <div class="i">
-                                        <i class="fas fa-user"></i>
-                                    </div>
-                                    <div class="div">
-                                        <h5>Select Class</h5>
-                                        <input type="text" class="input" name="name">
-                                    </div>
-                                </div>
-                                
-                                <!-- remove this and add it in the validation of creating class -->
-                                <div class="input-div pass" hidden>
+                                <div class="input-div pass">
                                     <div class="i">
                                         <i class="fas fa-lock"></i>
                                     </div>
-                                    <div class="div">
-                                        <h5> Teacher</h5>
-                                        <input type="text" class="input" name="teacher" 
-                                        value = <%= teacher._id %> >
-                                    </div>
+                                    <select name="classid" > 
+                                        <% for(var i = 0; i < classes.length; i++) { %>
+                                          <option value='<%= classes[i]._id %>'> <%= classes[i].name%> <%= classes[i].section   %> </option>
+                                        <% } %>
+                                      </select>
                                 </div>
                                 <input type="submit" class="btn" value="Create">
                         </form>
