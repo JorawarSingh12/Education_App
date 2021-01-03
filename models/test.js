@@ -10,7 +10,7 @@ const TestSchema = new Schema({
         type: Array,
     },
     fileLink:{
-
+        type: String,
     },
     dateCreated:{
         type: Date,
@@ -18,7 +18,7 @@ const TestSchema = new Schema({
     },
     dateEnded:{
         type: Date,
-    }
+    },
 }
 );
 module.exports = TestSchema;

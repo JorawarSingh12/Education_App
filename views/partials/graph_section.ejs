@@ -1,0 +1,61 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.bundle.min.js"
+integrity="sha512-SuxO9djzjML6b9w9/I07IWnLnQhgyYVSpHZx0JV97kGBfTIsUYlWflyuW4ypnvhBrslz1yJ3R+S14fdCWmSmSA=="
+crossorigin="anonymous"></script>
+<div class="chart-container" style="position: relative; height:15vh; width:50vw">
+    <canvas id="myChart"></canvas>
+    <canvas id="myChart2"></canvas>
+</div>
+<script>
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var ctx2 = document.getElementById('myChart2').getContext('2d')
+    let data = {
+        datasets: [{
+            data: [5, 3, 4, 4, 6, 3],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.6)',
+                'rgba(54, 162, 235, 0.6)',
+                'rgba(255, 206, 86, 0.6)',
+                'rgba(75, 192, 192, 0.6)',
+                'rgba(153, 102, 255, 0.6)',
+                'rgba(255, 159, 64, 0.6)'
+            ],
+            fill: '1',
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }],
+
+        // These labels appear in the legend and in the tooltips when hovering different arcs
+        labels: [
+            'Red',
+            'Yellow',
+            'Blue',
+            'Purple',
+            'Green',
+            'Black'
+        ],
+
+    };
+
+    var myPieChart = new Chart(ctx, {
+        type: 'line',
+        data: data,
+        options: {}
+    });
+
+    // And for a doughnut chart
+    var myDoughnutChart = new Chart(ctx2, {
+        type: 'bar',
+        data: data,
+        options: {}
+    });
+    chart.canvas.parentNode.style.height = '128px';
+    chart.canvas.parentNode.style.width = '128px';
+    
+</script>

@@ -9,9 +9,8 @@ const AssignmentSchema = new Schema({
     marks: {
         type: Array,
     },
-    dateCreated:{
+    timeCreated:{
         type: Date,
-        default: Date.now()
     },
     dateEnded:{
         type: Date,
