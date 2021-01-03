@@ -9,6 +9,9 @@ const TestSchema = new Schema({
     marks: {
         type: Array,
     },
+    fileLink:{
+
+    },
     dateCreated:{
         type: Date,
         default: Date.now()

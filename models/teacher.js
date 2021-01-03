@@ -6,6 +6,11 @@ const TeacherSchema = new Schema({
     subjects: {
         type: Array,
     },
+    classes: [{
+        _id: String,
+        name: String,
+        section: String,  
+    }]
 }
 );
 

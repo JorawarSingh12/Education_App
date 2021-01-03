@@ -23,13 +23,16 @@ router.post('/', function (req, res, next) {
     var Subject = mongoose.model('subject', SubjectSchema);
     var subject = new Subject({
         name: req.body.name,
+        teacher: req.user._id
     })
     Institution.findById(req.user.institution,
         function (err, institution) {
             if (err) throw err;
             var classes = institution.classes;
+            var classreq;
             for (i = 0; i < classes.length; i++) {
                 if (classes[i]._id.toString() === req.body.classid) {
+                    classreq = classes[i];
                     classes[i].subjects.push(subject);
                 }
             }
@@ -38,6 +41,7 @@ router.post('/', function (req, res, next) {
                 if (teachers[i]._id.toString() === req.user._id.toString()) {
 
                     teachers[i].subjects.push(subject._id);
+                    teachers[i].classes.push({_id: classreq._id,name: classreq.name,section: classreq.section})
                     institution.save(function (err) {
                         if (err) throw err;
                         console.log("teacher updated");

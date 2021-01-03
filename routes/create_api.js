@@ -5,6 +5,9 @@ const Teacher = require('../models/teacher');
 const Institution = require('../models/institution');
 const AssignmentSchema = require('../models/assignment');
 
+router.get("/:type",function(req, res,next){
+    
+})
 router.post('/', function (req, res, next) {
     
     var Assignment = mongoose.model('assignment',AssignmentSchema);

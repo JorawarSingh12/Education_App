@@ -1,4 +1,4 @@
-<%- include ('partials/header') %>
+<%- include ('../partials/header') %>
 
     <title>New Class </title>
 
@@ -6,14 +6,14 @@
     <link rel="stylesheet" type="text/css" href="/css/student_dashboard.css">
 
     <body class="overlay-scrollbar">
-        <%- include ('partials/messages.ejs') %>
+        <%- include ('../partials/messages.ejs') %>
         <!-- navbar -->
-        <%- include ('partials/navbar.ejs') %>
+        <%- include ('../partials/navbar.ejs') %>
             <!-- end navbar -->
 
 
             <!-- sidebar -->
-            <%- include ('partials/sidebar.ejs') %>
+            <%- include ('../partials/sidebar.ejs') %>
                 <!-- end sidebar -->
     <link rel="stylesheet" type="text/css" href="/css/style.css">
                         
@@ -23,18 +23,18 @@
                             <img src="/img/Institution_logo.png">
                     </div>
                     <div class="login-content"> 
-                        <form action= "/student_api" method="POST">
-                                <h2 class="title">Add Your Institution</h2>
-                                <div class="input-div one">
+                        <form action= "/profile" method="POST">
+                                <h2 class="title">Add Your Class</h2>
+                                <div class="input-div pass">
                                     <div class="i">
-                                        <i class="fas fa-user"></i>
+                                        <i class="fas fa-lock"></i>
                                     </div>
-                                    <div class="div">
-                                        <h5>Add Institution</h5>
-                                        <input type="text" class="input" name="institution">
-                                    </div>
+                                    <select name="classid" > 
+                                        <% for(var i = 0; i < classes.length; i++) { %>
+                                          <option value='<%= classes[i]._id %>'> <%= classes[i].name%> <%= classes[i].section   %> </option>
+                                        <% } %>
+                                      </select>
                                 </div>
-                                
                                 <input type="submit" class="btn" value="Create">
                         </form>
                     </div>
@@ -47,4 +47,4 @@
     
 
     <!-- end import script -->
-    <%- include ('partials/footer.ejs') %>
+    <%- include ('../partials/footer.ejs') %>

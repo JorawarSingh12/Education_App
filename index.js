@@ -40,15 +40,21 @@ app.use(function(req, res, next) {
 
 // all routes are mentioned here
 app.use("/",require('./routes/homepage'))
-app.use("/login",require('./routes/login'))
-app.use("/register",require('./routes/register'))
 app.use("/dashboard",require('./routes/dashboard'))
-app.use('/profile', require('./routes/profile'));
-app.use('/logout', require('./routes/logout'));
+
+// authorization routes
+app.use("/login",require('./routes/auth/login'))
+app.use("/register",require('./routes/auth/register'))
+app.use('/profile', require('./routes/auth/profile'));
+app.use('/logout', require('./routes/auth/logout'));
+
+
 
 app.use('/new_class', require('./routes/new_class'));
 app.use('/new_subject', require('./routes/new_subject'));
 app.use('/all_api', require('./routes/all_api'));
+app.use('/new_assignment',require('./routes/new_assignment'));
+app.use('/new_test',require('./routes/new_test'));
 
 // error page
 app.use(function(err, req, res, next){

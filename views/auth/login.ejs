@@ -1,11 +1,8 @@
-<%- include ('partials/header.ejs') %>
+<%- include ('../partials/header.ejs') %>
 	<title>Login Page</title>
 	<link rel="stylesheet" type="text/css" href="/css/style.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
 		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-	<!-- <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet"> -->
-	<!-- <script src="https://kit.fontawesome.com/a81368914c.js"></script> -->
-
 	<body>
 
 		<div style="position: relative; margin-top: 1.5rem; margin-right: 10.5rem;">
@@ -24,7 +21,7 @@
 			<div class="login-content">
 
 				<form action="/login" method="POST">
-					<%- include ('partials/messages.ejs') %>
+					<%- include ('../partials/messages.ejs') %>
 						<link rel="stylesheet" type="text/css" href="/css/style.css">
 									<img src="/img/Institution_logo.png">
 										<h2 class="title">Login</h2>
@@ -55,4 +52,4 @@
 		</div>
 
 		<script type="text/javascript" src="/js/form_register_login.js"></script>
-		<%- include ('partials/footer.ejs') %>
+		<%- include ('../partials/footer.ejs') %>

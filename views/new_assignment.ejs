@@ -6,56 +6,55 @@
     <link rel="stylesheet" type="text/css" href="/css/student_dashboard.css">
 
     <body class="overlay-scrollbar">
-        <!-- <%- include ('partials/messages.ejs') %> -->
+        <%- include ('partials/messages.ejs') %>
         <!-- navbar -->
         <%- include ('partials/navbar.ejs') %>
             <!-- end navbar -->
 
 
             <!-- sidebar -->
-            <%- include ('partials/institution_sidebar.ejs') %>
+            <%- include ('partials/teacher_sidebar.ejs') %>
                 <!-- end sidebar -->
     <link rel="stylesheet" type="text/css" href="/css/style.css">
                         
                 <!-- main content -->
                 <div class="container">
                     <div class="img">
-                        <img src="/img/Institution_logo.png">
+                        <img src="/img/Teacher_Logo.png">
                     </div>
                     <div class="login-content">
 
-                        <form action="/new_class" method="POST">
+                        <form action="/new_assignment" method="POST">
                             
-                                <h2 class="title">Create Class</h2>
+                                <h2 class="title">Add Assignment</h2>
                                 <div class="input-div one">
                                     <div class="i">
                                         <i class="fas fa-user"></i>
                                     </div>
                                     <div class="div">
-                                        <h5>Class Name</h5>
-                                        <input type="text" class="input" name="name">
+                                        <h5>Assignment Name</h5>
+                                        <input type="text" class="input" name="name" required>
                                     </div>
                                 </div>
                                 <div class="input-div pass">
                                     <div class="i">
                                         <i class="fas fa-lock"></i>
                                     </div>
+                                    <select name="classid" > 
+                                        <% for(var i = 0; i < classes.length; i++) { %>
+                                          <option value='<%= classes[i]._id %>'> <%= classes[i].name%> <%= classes[i].section   %> </option>
+                                        <% } %>
+                                      </select>
+                                </div>
+                                <div class="input-div one">
+                                    <div class="i">
+                                        <i class="fas fa-user"></i>
+                                    </div>
                                     <div class="div">
-                                        <h5>Section</h5>
-                                        <input type="text" class="input" name="section">
+                                        <h5>File Upload</h5>
+                                        <input type="file" class="input" name="file" >
                                     </div>
                                 </div>
-                                <!-- remove this and add it in the validation of creating class -->
-                                <!-- <div class="input-div pass" hidden>
-                                    <div class="i">
-                                        <i class="fas fa-lock"></i>
-                                    </div>
-                                    <div class="div">
-                                        <h5>Institution</h5>
-                                        <input type="text" class="input" name="institution" 
-                                        value = <%= institution._id %> >
-                                    </div>
-                                </div> -->
                                 <input type="submit" class="btn" value="Create">
                         </form>
                     </div>

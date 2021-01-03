@@ -1,18 +1,18 @@
 const express = require('express');
 var router = express.Router();
-const { forwardAuthenticated } = require('../config/auth');
+const { forwardAuthenticated } = require('../../config/auth');
 const bcrypt = require('bcryptjs');
-const User = require('../models/user');
-const Institution = require('../models/institution');
-const StudentSchema = require('../models/student');
-const TeacherSchema = require('../models/teacher');
+const User = require('../../models/user');
+const Institution = require('../../models/institution');
+const StudentSchema = require('../../models/student');
+const TeacherSchema = require('../../models/teacher');
 const mongoose= require('mongoose');
 
 
 router.get("/", forwardAuthenticated, (req, res) => {
-    Institution.find((err, result) => {
+    Institution.find({},(err, result) => {
         if (err) throw err
-        res.render('register', { institutions: result })
+        res.render('auth/register', { institutions: result })
     })
 
 })
@@ -75,7 +75,7 @@ router.post('/', function (req, res, next) {
                                     'success_msg',
                                     'You are now registered and can log in'
                                 );
-                                res.redirect("/login/" );
+                                res.redirect("/login" );
                             })
                             .catch(err => console.log(err));
                     })
