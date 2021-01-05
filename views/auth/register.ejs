@@ -35,7 +35,7 @@
 						</div>
 						<div class="input-div one">
 							<div class="i">
-								<i class="fas fa-user"></i>
+								<i class="fas fa-at"></i>
 							</div>
 							<div class="div">
 								<h5>Email</h5>
@@ -61,26 +61,22 @@
 							</div>
 						</div>
 
-						<div class="input-div pass">
-							<div class="i">
-								<i class="fas fa-lock"></i>
-							</div>
-							<select class="div " name="type">
+	
+						<div class="form-group">
+							<select  name="type" class="form-control">
 								<option value="student">Student</option>
 								<option value="teacher">Teacher</option>
 								<option value="institution">Institution</option>
 							</select>
-						</div>
-						<div class="input-div pass">
-							<div class="i">
-								<i class="fas fa-lock"></i>
-							</div>
-							<select name="institution" > 
+						  </div>
+						<div class="form-group">
+							<select name="institution" class="form-control"> 
 								<% for(var i = 0; i < institutions.length; i++) { %>
 								  <option value='<%= institutions[i]._id %>'><%= institutions[i].name  %></option>
 								<% } %>
 							  </select>
-						</div>
+						  </div>
+
 						<input type="submit" class="btn" value="Register">
 						<a href="/login">Already have an account</a>
 				</form>

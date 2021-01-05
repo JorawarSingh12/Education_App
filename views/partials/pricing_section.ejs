@@ -12,39 +12,36 @@
   width: 5rem;
   height: 6px;
   border-radius: 1rem;
+  background: #6cb2c2;
+  background: -webkit-linear-gradient(to right, #c6dfe4, #62cce9);
+  background: linear-gradient(to right, #c6dfe4, #62cce9);
 }
 
 .text-uppercase {
   letter-spacing: 0.2em;
 }
 
-/*
-*
-* ==========================================
-* FOR DEMO PURPOSES
-* ==========================================
-*
-*/
-
 .price_body {
   /* position: relative; */
-  margin-top: 13rem;
-  background: #00B4DB;
-  background: -webkit-linear-gradient(to right, #0083B0, #00B4DB);
-  background: linear-gradient(to right, #0083B0, #00B4DB);
-  color: #514B64;
-  min-height: 90vh;
+  padding-top: 8rem;
+  background: whitesmoke;
+  background: -webkit-linear-gradient(to top, #c3e1eb,  rgb(244, 248, 248));
+  background: linear-gradient(to top, #c3e1eb,  rgb(244, 248, 248));
+  padding-bottom: 5rem;
+  min-height: 60rem;
 }
+
 </style>
 <section class="price_body" id="price_body">
-    <div class="container py-5">
+    <div class="container ">
         <!-- https://bootstrapious.com/snippets Taken from here -->
       <!-- FOR DEMO PURPOSE -->
-      <header class="text-center mb-5 text-white">
+      <header class="text-center mb-5 text-info" style="font-size: 10rem">
         <div class="row">
-          <div class="col-lg-7 mx-auto">
-            <h1>Choose Your Plan</h1>
-            <p>Smoothly select a plan.<br> <a href="/" class="text-reset">Cancel at any time.</a></p>
+          <div class="col-lg-7 mx-auto" >
+            <h1 style="font-size: 4rem; padding-bottom: 2rem;"><i class="fas fa-tags" style="font-size: 2rem;"> </i> Pricing</h1>
+            <h6 style="color: rgb(37, 35, 35);"><i class="fas fa-check"></i> select your favourite<br> 
+              <a href="/" class="text-reset" ><i class="fas fa-heart-broken"></i> Cancel at any time.*</a></h6>
           </div>
         </div>
       </header>
@@ -54,16 +51,17 @@
   
       <div class="row text-center align-items-end">
         <!-- Pricing Table-->
-        <div class="col-lg-4 mb-5 mb-lg-0">
-          <div class="bg-white p-5 rounded-lg shadow">
-            <h1 class="h6 text-uppercase font-weight-bold mb-4">Basic</h1>
+        
+        <div class=" col-lg-4 mb-5 mb-lg-0">
+          <div class="price-option bg-white p-5 rounded-lg shadow">
+            <h1 class="h5 text-uppercase font-weight-bold mb-4">Basic</h1>
             <h2 class="h1 font-weight-bold">Free<span class="text-small font-weight-normal ml-2">/ month</span></h2>
   
             <div class="custom-separator my-4 mx-auto bg-primary"></div>
   
             <ul class="list-unstyled my-5 text-small text-left">
               <li class="mb-3">
-                <i class="fa fa-check mr-2 text-primary"></i>10 Class</li>
+                <i class="fa fa-check mr-2 text-primary"></i>Organise Schooling</li>
               <li class="mb-3">
                 <i class="fa fa-check mr-2 text-primary"></i>1 class meet/week</li>
               <li class="mb-3">
@@ -81,16 +79,17 @@
                 <del>Detailed Analysis</del>
               </li>
             </ul>
-            <a href="#" class="btn btn-primary btn-block p-2 shadow rounded-pill">Subscribe</a>
+            <a href="#" class="btn btn-outline-primary btn-block p-2 shadow rounded-pill">Subscribe</a>
           </div>
         </div>
         <!-- END -->
   
   
         <!-- Pricing Table-->
-        <div class="col-lg-4 mb-5 mb-lg-0">
-          <div class="bg-white p-5 rounded-lg shadow">
-            <h1 class="h6 text-uppercase font-weight-bold mb-4">Pro</h1>
+        <div class=" col-lg-4 mb-5 mb-lg-0">
+          <div class="price-option bg-white p-5 rounded-lg shadow">
+            
+            <h1 class="h5 text-uppercase font-weight-bold mb-4">Pro</h1>
             <h2 class="h1 font-weight-bold">$20<span class="text-small font-weight-normal ml-2">/ month</span></h2>
   
             <div class="custom-separator my-4 mx-auto bg-primary"></div>
@@ -111,16 +110,16 @@
                 <del>Notifications</del>
               </li>
             </ul>
-            <a href="#" class="btn btn-primary btn-block p-2 shadow rounded-pill">Subscribe</a>
+            <a href="#" class="btn btn-outline-primary btn-block p-2 shadow rounded-pill">Subscribe</a>
           </div>
         </div>
         <!-- END -->
   
   
         <!-- Pricing Table-->
-        <div class="col-lg-4">
-          <div class="bg-white p-5 rounded-lg shadow">
-            <h1 class="h6 text-uppercase font-weight-bold mb-4">Enterprise</h1>
+        <div class=" col-lg-4 mb-5 mb-lg-0">
+          <div class="price-option bg-white p-5 rounded-lg shadow">
+            <h1 class="h5 text-uppercase font-weight-bold mb-4">Enterprise</h1>
             <h2 class="h1 font-weight-bold">$100<span class="text-small font-weight-normal ml-2">/ month</span></h2>
   
             <div class="custom-separator my-4 mx-auto bg-primary"></div>
@@ -139,7 +138,7 @@
               <li class="mb-3">
                 <i class="fa fa-check mr-2 text-primary">24/7 Available</i></li>
             </ul>
-            <a href="#" class="btn btn-primary btn-block p-2 shadow rounded-pill">Subscribe</a>
+            <a href="#" class="btn btn-outline-primary btn-block p-2 shadow rounded-pill">Subscribe</a>
           </div>
         </div>
         <!-- END -->

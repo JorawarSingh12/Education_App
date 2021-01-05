@@ -1,0 +1,50 @@
+<%- include ('partials/header.ejs') %>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.bundle.min.js"
+        integrity="sha512-SuxO9djzjML6b9w9/I07IWnLnQhgyYVSpHZx0JV97kGBfTIsUYlWflyuW4ypnvhBrslz1yJ3R+S14fdCWmSmSA=="
+        crossorigin="anonymous"></script>
+    <title> Dashboard </title>
+
+
+    <link rel="stylesheet" type="text/css" href="/css/student_dashboard.css">
+
+    <body class="overlay-scrollbar">
+
+        <%- include ('partials/navbar.ejs') %>
+
+            <%- include ('partials/institution_sidebar.ejs') %>
+
+<div class="wrapper">
+                <table>
+                    <thead>
+                        <!-- add the logic of assignments here -->
+                        <tr>
+                            <th>S. No.</th>
+                            <th>Subject Name</th>
+                            <th> Teacher</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% var subjects = clss.subjects %>
+                            <% for(var i=0; i < subjects.length; i++) { %>
+                                
+                                <tr>
+                                    <a href="/subject_analysis/"+<% subjects[i]._id %> >    
+                                    <td>
+                                        <%= i+1 %>
+                                    </td>
+                                    <td>
+                                        <%= subjects[i].name %>
+                                    </td>
+                                    <td>
+                                        <%= subjects[i].teacher %>
+                                    </td>
+                                </a>
+                                </tr>
+
+                                <% } %>
+                    </tbody>
+                </table>
+            </div>
+    </body>
+                <!-- end import script -->
+                <%- include ('partials/footer.ejs') %>

@@ -14,7 +14,7 @@
       <!-- sidebar -->
       <%- include ('partials/institution_sidebar.ejs') %>
         <!-- end sidebar -->
- 
+
 
         <!-- main content -->
         <div class="wrapper">
@@ -37,7 +37,7 @@
                       <tr>
                         <th>S. No.</th>
                         <th>Name</th>
-                        <% if(type === 'classes' ){ %>
+                        <% if(type==='classes' ){ %>
                           <th> Section</th>
                           <% } %>
                       </tr>
@@ -51,7 +51,7 @@
                           <td>
                             <%= result[i].name %>
                           </td>
-                          <% if(type === 'classes' ){ %>
+                          <% if(type==='classes' ){ %>
                             <td>
                               <%= result[i].section %>
                             </td>
@@ -65,21 +65,23 @@
             </div>
           </div>
           <div class="row">
-          <!-- this is progress bar code  -->
-          <div class="card-deck">
-            <% for(var i=0; i < result.length; i++) { %>
-              <div class="card">
-                <img  src="/img/avatar.svg" alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title"> <%= result[i].name %></h5>
-                  <p class="card-text">This is sample text.</p>
+            <!-- this is progress bar code  -->
+            <div class="card-deck">
+              <% for(var i=0; i < result.length; i++) { %>
+                <div class="card">
+                  <img src="/img/avatar.svg" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      <%= result[i].name %>
+                    </h5>
+                    <p class="card-text">This is sample text.</p>
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                  </div>
                 </div>
-                <div class="card-footer">
-                  <small class="text-muted">Last updated 3 mins ago</small>
-                </div>
-              </div>              
-                 <% } %>            
-                </div>
+                <% } %>
+            </div>
           </div>
 
           <script type="text/javascript"

@@ -2,9 +2,6 @@
 html{
   scroll-behavior: smooth;
 }
-body {
-  font-family: 'Poppins', sans-serif;
-}
 
 .head__custom-nav .navbar-brand img {
   width: 18px;
@@ -22,9 +19,13 @@ body {
   font-weight: 400;
   padding: 8px 15px;
   white-space: nowrap;
-  transition: 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86); }
+  transition: 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86); 
+}
   .head__custom-nav #navbarNav .navbar-nav .nav-item .nav-link:hover {
-    color: rgb(69, 228, 188); }
+    color: rgb(69, 228, 188);
+    border-bottom: 3px;
+    border-color: rgb(69, 228, 188);
+   }
 
 .custom-section {
   width: inherit;
@@ -54,13 +55,13 @@ body {
       display: inline-block;
       padding: 8px 22px;
       color: #fff;
-      background-color: #25da2e;
+      background-color: rgb(69, 228, 188);;
       border: 1px solid transparent;
       margin-top: 60px;
       text-decoration: none;
       transition: 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86); }
       .custom-section .col-lg-4 a:hover {
-        color: #25da2e;
+        color: rgb(69, 228, 188);
         background-color: #fff;
         border: 1px solid #25da2e; }
   .custom-section .col-lg-8 img {

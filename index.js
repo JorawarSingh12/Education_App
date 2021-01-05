@@ -55,8 +55,10 @@ app.use('/new_subject', require('./routes/new_subject'));
 app.use('/all_api', require('./routes/all_api'));
 app.use('/new_assignment',require('./routes/new_assignment'));
 app.use('/new_test',require('./routes/new_test'));
+app.use('/class_analysis',require('./routes/analysis'))
 
 // error page
+
 app.use(function(err, req, res, next){
   console.log(err); // to see properties of message in our console
   res.status(422).render('error_page',{err: err.message});

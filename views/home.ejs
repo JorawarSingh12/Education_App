@@ -9,8 +9,8 @@
     </head>
 
     <body>
-        <div class="container" style="
-    background-color: whitesmoke;">
+        <div class="container-fluid col-lg-10" style="
+    background-color: whitesmoke;  margin-top: 1rem;">
             <header class="head my-3">
                 <nav class="navbar navbar-expand-lg navbar-light head__custom-nav">
                     <a class="navbar-brand d-flex align-items-center" href="/">
@@ -25,14 +25,18 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Home</a>
                             </li>
+                            
+                            <li class="nav-item">
+                                <a class="nav-link" href="#features_section">Features</a>
+                            </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#price_body">Pricing</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">About Us</a>
+                                <a class="nav-link" href="#testimonial_body">Testimonials</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#testimonial_body">Testimonials</a>
+                                <a class="nav-link" href="#about_section">About Us</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="/register">SignUp</a>
@@ -48,36 +52,36 @@
         <div class="container">
             <div class="row custom-section d-flex align-items-center">
                 <div class="col-12 col-lg-4">
-                    <h2>Team Work</h2>
-                    <h3>Process</h3>
-                    <p>In Progress</p>
-                    <a href="#">Learn More</a>
+                    <h2>Organise</h2>
+                    <h2>Your</h2>
+                    <h3>Schooling</h3>
+                    <a href="#benefits_section">Learn More</a>
                 </div>
                 <div class="col-12 col-lg-8">
-                    <img src="/img/mainbenner.png" alt="Team process banner">
+                    <img src="https://www.freevector.com/uploads/vector/preview/28148/EducationBackground_Preview_03.jpg"
+                        alt="Team process banner">
                 </div>
             </div>
         </div>
+        <%- include ('partials/benefits') %>
+        <%- include ('partials/features') %>
         <%- include ('partials/pricing_section') %>
-        <%- include ('partials/testimonial') %>
-        <%- include ('partials/teacher_advantage') %>
-        <%- include ('partials/graph_section') %>
-        
-
-                <!-- Optional JavaScript -->
-              
-                <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-
-               
+            <%- include ('partials/testimonial') %>
+                <%- include ('about_section') %>
+                <%- include ('partials/newsletter') %>
+                
 
 
-                <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-                    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-                    crossorigin="anonymous">
-                    </script>
 
-                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-                    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-                    crossorigin="anonymous">
-                    </script>
-                <%- include ('partials/footer') %>
+
+
+                    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+                        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+                        crossorigin="anonymous">
+                        </script>
+
+                    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+                        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+                        crossorigin="anonymous">
+                        </script>
+                    <%- include ('partials/footer') %>
