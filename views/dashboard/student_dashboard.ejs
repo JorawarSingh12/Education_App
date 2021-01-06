@@ -1,23 +1,13 @@
 <%- include ('../partials/header') %>
 
 	<title><%- (typeof(user) !== 'undefined')? user.name : A %>'s Dashboard </title>
-
-
 	<link rel="stylesheet" type="text/css" href="/css/student_dashboard.css">
-	
 <body class="overlay-scrollbar">
-	<!-- navbar -->
 	<%- include ('../partials/navbar.ejs') %>
-	<!-- end navbar -->
-	
-	
-	<!-- sidebar -->
 	<%- include ('../partials/sidebar.ejs') %>
-	<!-- end sidebar -->
 
 
-	<!-- main content -->
-	<div class="wrapper">
+	<div class="wrapper" style="padding-top: 10rem;">
 		<div class="row">
 			<div class="col-4 col-m-6 col-sm-6">
 				<div class="counter bg-primary">

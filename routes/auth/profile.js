@@ -5,18 +5,7 @@ const {  ensureAuthenticated } = require('../../config/auth');
 const Institution = require("../../models/institution")
 const multer = require('multer')
 const path = require('path')
-const storage = multer.diskStorage({
-    destination: path.join(__dirname,'../../public/uploads/'),
-    filename : function(req,file,cb){
-        cb(null,file.fieldname + '-' + Date.now()+
-        path.extname(file.originalname)
-        )
-    }
-})
-const upload = multer({
-    storage: storage,
 
-}).single('myImage')
 
 router.get("/",ensureAuthenticated, (req, res,next) => { 
     
@@ -31,7 +20,7 @@ router.get("/",ensureAuthenticated, (req, res,next) => {
             {
                 if(students[i]._id.toString() === req.user._id.toString())
                 {
-                    res.render('auth/profile', { user: students[i]  })
+                    res.render('auth/profile', { user: students[i] , userinfo: req.user  })
                 }
             }
             
@@ -43,7 +32,7 @@ router.get("/",ensureAuthenticated, (req, res,next) => {
             {
                 if(teachers[i]._id.toString() === req.user._id.toString())
                 {
-                    res.render('auth/profile', { user: teachers[i]  })
+                    res.render('auth/profile', { user: teachers[i], userinfo: req.user  })
                 }
             }
         }
@@ -56,11 +45,23 @@ router.get("/",ensureAuthenticated, (req, res,next) => {
 }) 
 
 router.post("/",ensureAuthenticated, (req, res,next) => { 
+    const storage = multer.diskStorage({
+        destination: path.join(__dirname,'../../public/uploads/'),
+        filename : function(req,file,cb){
+            cb(null,file.fieldname + '-' +req.user._id+
+            path.extname(file.originalname)
+            )
+        }
+    })
+    const upload = multer({
+        storage: storage,
+    
+    }).single('myImage')
     
     upload(req,res,(err)=>{
         if(err)
             console.log(err)
-        console.log(req.file)
+        // console.log(req.file)
         res.redirect("/dashboard")
     }) 
 }) 
