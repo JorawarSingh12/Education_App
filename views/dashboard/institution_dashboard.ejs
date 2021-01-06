@@ -21,101 +21,49 @@
 
 					<!-- main content -->
 					<div class="wrapper">
-						<div class="row">
-							<div class="col-4 col-m-6 col-sm-6">
-								<div class="counter bg-primary">
-									<p>
-										<i class="fas fa-stopwatch-20"></i>
-									</p>
-									<h3>1</h3>
-									<p>Assignments To do</p>
-								</div>
+						<div class="row " >
+							<div class="col-lg-12 col-m-12 col-sm-12  counter" >
+								<h1 class="text-info"  style=" font-size: 6rem;"> <%= institution.name%> </h1>
 							</div>
 
-							<div class="col-4 col-m-6 col-sm-6">
-								<div class="counter bg-warning">
-									<p>
-										<i class="fas fa-tired"></i>
-									</p>
-									<h3>10</h3>
-									<p>In Evaluation</p>
-								</div>
-							</div>
-
-
-
-							<div class="col-4 col-m-6 col-sm-6">
+						</div>
+						<div class="row" style="padding-top: 5rem;">
+							<div class="col-lg-4 col-m-5 col-sm-5">
 								<div class="counter bg-danger">
 									<p>
-										<i class="fas fa-laugh-beam"></i>
+										<i class="fas fa-child" style="font-size: 8rem;"></i>
 									</p>
-									<h3>1</h3>
-									<p>Results</p>
+									<h3><%= institution.students.length%></h3>
+									<p>STUDENTS</p>
+								</div>
+							</div>
+
+							<div class="col-lg-4 col-m-5 col-sm-5">
+								<div class="counter bg-warning">
+									<p>
+										<i class="fas fa-user-tie" style="font-size: 8rem;"></i>
+									</p>
+									<h3><%= institution.teachers.length %></h3>
+									<p>TEACHERS</p>
+								</div>
+							</div>
+
+
+
+							<div class="col-lg-4 col-m-6 col-sm-6">
+								<div class="counter bg-info">
+									<p>
+										<i class="fas fa-chalkboard-teacher" style="font-size: 8rem;"></i>
+									</p>
+									<h3><%= institution.classes.length %></h3>
+									<p>CLASSES</p>
 								</div>
 							</div>
 
 						</div>
 
-						<!-- This is table part code  -->
-						<div class="row">
-							<div class="col-8 col-m-12 col-sm-12">
-								<div class="card">
-									<div class="card-header">
-										<h3>
-											Assignments
-										</h3>
-										<i class="fas fa-ellipsis-h"></i>
-									</div>
-									<div class="card-content">
-										<table>
-											<thead>
-												<!-- add the logic of assignments here -->
-												<tr>
-													<th>S. No.</th>
-													<th>Name</th>
-													<th>Course</th>
-													<th>Due date</th>
-												</tr>
-											</thead>
-											<tbody>
-
-											</tbody>
-										</table>
-									</div>
-								</div>
-							</div>
-
-
-							<!-- this is progress bar code  -->
-							<div class="col-4 col-m-12 col-sm-12">
-								<div class="card">
-									<div class="card-header">
-										<h3>
-											Progress bar
-										</h3>
-										<i class="fas fa-ellipsis-h"></i>
-									</div>
-									<div class="card-content">
-										<div class="progress-wrapper">
-											<p>
-												Test Score
-												<span class="float-right">50%</span>
-											</p>
-											<div class="progress">
-												<div class="bg-success" style="width: 50%"></div>
-											</div>
-										</div>
-										<div class="progress-wrapper">
-											<p>
-												Overall Attendence
-												<span class="float-right">60%</span>
-											</p>
-											<div class="progress">
-												<div class="bg-primary" style="width:60%"></div>
-											</div>
-										</div>
-
-
-										<script type="text/javascript" src="/js/student_dashboard.js"></script>
+			
+							
+			<script type="text/javascript" src="/js/student_dashboard.js"></script>
 										<!-- end import script -->
 										<%- include ('../partials/footer.ejs') %>

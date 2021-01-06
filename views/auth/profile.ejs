@@ -1,12 +1,12 @@
 <%- include ('../partials/header') %>
 
-    <title>New Class </title>
+    <title>Profile</title>
 
 
     <link rel="stylesheet" type="text/css" href="/css/student_dashboard.css">
 
     <body class="overlay-scrollbar">
-        <%- include ('../partials/messages.ejs') %>
+
         <!-- navbar -->
         <%- include ('../partials/navbar.ejs') %>
             <!-- end navbar -->
@@ -15,34 +15,20 @@
             <!-- sidebar -->
             <%- include ('../partials/sidebar.ejs') %>
                 <!-- end sidebar -->
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
                         
                 <!-- main content -->
-                <div class="container">
+                <div class="wrapper">
                     <div class="img">
-                            <img src="/img/Institution_logo.png">
+                            <img src="/uploads/Institution_logo.png" alt="User Image">
                     </div>
-                    <div class="login-content"> 
-                        <form action= "/profile" method="POST">
-                                <h2 class="title">Add Your Class</h2>
-                                <div class="input-div pass">
-                                    <div class="i">
-                                        <i class="fas fa-lock"></i>
-                                    </div>
-                                    <select name="classid" > 
-                                        <% for(var i = 0; i < classes.length; i++) { %>
-                                          <option value='<%= classes[i]._id %>'> <%= classes[i].name%> <%= classes[i].section   %> </option>
-                                        <% } %>
-                                      </select>
-                                </div>
+                        <form action= "/profile" method="POST" enctype="multipart/form-data">
+                            <label for="username">User Image</label>
+                                <input class="form-group" type="file" name="myImage">
+
                                 <input type="submit" class="btn" value="Create">
                         </form>
-                    </div>
                 </div>
     </body>
-
-    <script type="text/javascript" src="/js/form_register_login.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
     <script type="text/javascript" src="/js/student_dashboard.js"></script>
     
 

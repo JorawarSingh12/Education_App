@@ -7,8 +7,8 @@ const { ensureAuthenticated } = require('../config/auth');
 // create new class in the db
 router.get('/:typed',ensureAuthenticated, function (req, res, next) {
     Institution.findById(req.user._id,(err,result)=>{
-
-        res.render('all_api.ejs',{user: req.user,result: result[req.params.typed],type: req.params.typed})
+// user sent for dashboard
+        res.render('all_api.ejs',{user:req.user,result: result[req.params.typed]})
     })
     .catch(next)
 });

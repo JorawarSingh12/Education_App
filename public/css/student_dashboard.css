@@ -4,15 +4,15 @@
 	--warning-color: #e08d2e;
 	--danger-color: #45a81a;
 
-	--light-color: #262829;
+	--light-color: black;
 	--light-second-color: #252525;
-	--light-background: #ffffff;
-	--light-second-background: #f0eaea;
+	--light-background: rgb(255, 255, 255);
+	--light-second-background: rgb(252, 250, 250);
 
-	--dark-color: #d1c8c8;
-	--dark-second-color: #c3c3c7;
-	--dark-background: #2c2d36;
-	--dark-second-background: #181818;
+	--dark-color:white;
+	--dark-second-color: rgb(184, 178, 178);
+	--dark-background: #2c2c2e;
+	--dark-second-background: #444040;
 }
 
 .light {
@@ -196,7 +196,7 @@ body {
 }
 
 .dropdown-expand {
-	display: flex;
+	display: inline-flex;
 }
 
 .notification-menu {
@@ -297,13 +297,15 @@ body {
 	padding-top: 75px;
 	background: var(--second-bg-color);
 	transition: margin-left .5s;
+	min-height: 50rem;
 }
 
 .sidebar {
 	width: 82px;
 	height: 100vh;
 	position: fixed;
-	margin-top: 65px;
+	margin-top: 75px;
+	padding-top: 10px;
 	background: var(--main-bg-color);
 	box-shadow: rgba(0,0,0,0.12) 0px 1px 4px 1px;
 	overflow: hidden;
@@ -353,6 +355,7 @@ body {
 
 .sidebar-nav-link:hover {
 	background: var(--second-bg-color);
+	color: #45a81a;
 }
 
 .sidebar-nav-link.active {
@@ -377,20 +380,7 @@ body {
 	margin-left: 250px;
 }
 
-.row {
-	margin-top: 3rem;
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: row;
-}
 
-.row:after, .row:before {
-	box-sizing: border-box;
-}
-
-[class*="col-"] {
-	padding: 10px;
-}
 
 /* Extra small devices <= 600px */
 @media only screen and (max-width: 600px) {
@@ -496,40 +486,7 @@ body {
 	font-size: 50px;
 }
 
-.card {
-	background: var(--main-bg-color);
-	color: var(--main-color);
-	border-radius: 10px;
-	margin-bottom: 10px;
-	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-}
 
-.card-header {
-	padding: 15px 30px;
-	border-bottom: 1px solid var(--second-bg-color);
-	position: relative;
-}
-
-.card-header i {
-	color: var(--main-color);
-	position: absolute;
-	right: 30px;
-	top: 50%;
-	transform: translateY(-50%);
-}
-
-.card-header i:hover {
-	cursor: pointer;
-}
-
-.card-header h3 {
-	margin: 0;
-}
-
-.card-content {
-	padding: 20px;
-	overflow-x: auto;
-}
 
 table {
 	border-collapse: collapse;
